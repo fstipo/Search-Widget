@@ -69,3 +69,7 @@ body {
 .container.active .btn {
   transform: translateX(19.8rem);
 }
+
+.icon-search {
+  color: #858585;
+}
