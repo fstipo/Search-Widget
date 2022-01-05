@@ -3,7 +3,7 @@
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
  - SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 */
 
@@ -12,8 +12,7 @@
 html {
   /* default: 10px */
   /* 10 / 16 * 100 = 62.5 */
-  font-size: 16px;
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
 }
 
 * {
@@ -27,4 +26,46 @@ body {
   justify-content: center;
   overflow: hidden;
   height: 100vh;
+  background-image: linear-gradient(90deg, #647ce6, #2540b9);
+}
+
+.container {
+  position: relative;
+  height: 5.2rem;
+}
+
+.search {
+  background-color: #fff;
+  border: 0;
+  font-size: 2.4rem;
+  padding: 2rem;
+  height: 5.2rem;
+  width: 5.2rem;
+  transition: width 0.3s ease;
+}
+
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5.2rem;
+  width: 5.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.search:focus {
+  outline: 0;
+}
+
+.container.active .search {
+  width: 20rem;
+}
+
+.container.active .btn {
+  transform: translateX(19.8rem);
 }
