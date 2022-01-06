@@ -1,5 +1,7 @@
 const btn = document.querySelector('.btn');
+let divEl = document.querySelector('.container');
+let inputEl = document.querySelector('.search');
 btn.addEventListener('click', () => {
-  let divEl = document.querySelector('.container');
   divEl.classList.toggle('active');
+  inputEl.focus();
 });
